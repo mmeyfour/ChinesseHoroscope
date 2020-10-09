@@ -21,19 +21,23 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="LoginStackView" axis="vertical" distribution="equalCentering" alignment="center" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="oxU-gZ-aLL" userLabel="LoginStackView">
-                                <rect key="frame" x="16" y="549.66666666666663" width="382" height="296.33333333333337"/>
+                                <rect key="frame" x="16" y="546.66666666666663" width="382" height="299.33333333333337"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="your name : " minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qVX-M0-kZE">
-                                        <rect key="frame" x="30.666666666666657" y="0.0" width="321" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your name : " textAlignment="center" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qVX-M0-kZE">
+                                        <rect key="frame" x="30.666666666666657" y="0.0" width="321" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="0.15484991940000001" colorSpace="calibratedWhite"/>
-                                        <attributedString key="attributedText"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                         <connections>
                                             <action selector="didEditTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="NCA-K7-4AK"/>
                                         </connections>
                                     </textField>
-                                    <datePicker contentMode="scaleAspectFit" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Qos-Me-MfC">
-                                        <rect key="frame" x="31" y="37.333333333333371" width="320" height="216"/>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Qos-Me-MfC">
+                                        <rect key="frame" x="31" y="40.333333333333371" width="320" height="216"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="Sho-I7-mGT"/>
+                                        </constraints>
                                         <date key="minimumDate" timeIntervalSinceReferenceDate="-662734800">
                                             <!--1980-01-01 11:00:00 +0000-->
                                         </date>
@@ -42,7 +46,7 @@
                                         </date>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ld-Qk-Imn">
-                                        <rect key="frame" x="31" y="251.33333333333337" width="320" height="45"/>
+                                        <rect key="frame" x="31" y="254.33333333333337" width="320" height="45"/>
                                         <color key="backgroundColor" white="1" alpha="0.15484991941982282" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <state key="normal" title="Go !">
