@@ -12,12 +12,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nameTextFiled: UITextField!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         nameTextFiled.delegate = self
+        datePicker.setValue(UIColor.white, forKey: "textColor")
+        
         self.hideKeyboardWhenTappedAround()
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
 
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
@@ -29,7 +33,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         nameTextFiled.attributedPlaceholder = NSAttributedString(string: "Your Name: ", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(white: 1.0, alpha: 0.5)])
         
         nameTextFiled.text == "" ? (doneButton.isEnabled = false) : (doneButton.isEnabled = true)
-        //doneButton.isEnabled ? (doneButton.backgroundColor?.ciColor.blue) :(doneButton.backgroundColor?.ciColor.red) 
+        //doneButton.isEnabled ? (doneButton.backgroundColor?.ciColor.blue) :(doneButton.backgroundColor?.ciColor.red)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -38,7 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func keyboardWillShow(sender: NSNotification) {
-         self.view.frame.origin.y = -100 // Move view 150 points upward
+         self.view.frame.origin.y = -150 // Move view 150 points upward
     }
 
     @objc func keyboardWillHide(sender: NSNotification) {

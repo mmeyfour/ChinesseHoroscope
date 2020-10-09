@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,20 +20,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="LoginStackView" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="oxU-gZ-aLL" userLabel="LoginStackView">
-                                <rect key="frame" x="16" y="519" width="382" height="327"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="LoginStackView" axis="vertical" distribution="equalCentering" alignment="center" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="oxU-gZ-aLL" userLabel="LoginStackView">
+                                <rect key="frame" x="16" y="549.66666666666663" width="382" height="296.33333333333337"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="your name : " minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qVX-M0-kZE">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
+                                        <rect key="frame" x="30.666666666666657" y="0.0" width="321" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="0.15484991940000001" colorSpace="calibratedWhite"/>
                                         <attributedString key="attributedText"/>
-                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                         <connections>
                                             <action selector="didEditTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="NCA-K7-4AK"/>
                                         </connections>
                                     </textField>
-                                    <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="bottom" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Qos-Me-MfC">
-                                        <rect key="frame" x="0.0" y="50" width="382" height="216"/>
+                                    <datePicker contentMode="scaleAspectFit" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Qos-Me-MfC">
+                                        <rect key="frame" x="31" y="37.333333333333371" width="320" height="216"/>
                                         <date key="minimumDate" timeIntervalSinceReferenceDate="-662734800">
                                             <!--1980-01-01 11:00:00 +0000-->
                                         </date>
@@ -42,7 +42,7 @@
                                         </date>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ld-Qk-Imn">
-                                        <rect key="frame" x="0.0" y="282" width="382" height="45"/>
+                                        <rect key="frame" x="31" y="251.33333333333337" width="320" height="45"/>
                                         <color key="backgroundColor" white="1" alpha="0.15484991941982282" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <state key="normal" title="Go !">
@@ -54,10 +54,14 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="qVX-M0-kZE" firstAttribute="width" secondItem="Qos-Me-MfC" secondAttribute="width" constant="1" id="46d-AA-Tzw"/>
+                                    <constraint firstItem="qVX-M0-kZE" firstAttribute="width" secondItem="3ld-Qk-Imn" secondAttribute="width" constant="1" id="Zy7-2Y-0cw"/>
+                                </constraints>
                                 <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chinesse Horoscope" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cG-mp-WBA">
-                                <rect key="frame" x="16" y="60" width="382" height="25.5"/>
+                                <rect key="frame" x="16" y="59.999999999999993" width="382" height="25.666666666666664"/>
                                 <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="17"/>
                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
@@ -80,6 +84,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomConstraint" destination="0h3-H6-vQ5" id="lkY-Mw-Hmb"/>
+                        <outlet property="datePicker" destination="Qos-Me-MfC" id="SM8-ID-w7R"/>
                         <outlet property="doneButton" destination="3ld-Qk-Imn" id="lUa-Rr-KBe"/>
                         <outlet property="nameTextFiled" destination="qVX-M0-kZE" id="nOd-4Q-PIH"/>
                     </connections>
