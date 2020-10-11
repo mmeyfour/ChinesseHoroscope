@@ -25,6 +25,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         doneButton.isEnabled = false
         nameTextFiled.delegate = self
         datePicker.setValue(UIColor.white, forKey: "textColor")
+        doneButton.layer.cornerRadius = 12
+        nameTextFiled.layer.cornerRadius = 12
+        datePicker.layer.cornerRadius = 12
         
         self.hideKeyboardWhenTappedAround()
         

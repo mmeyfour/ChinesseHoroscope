@@ -8,23 +8,25 @@
 import UIKit
 
 class AnimalViewController: UIViewController {
-
+    
+    let animalList = AnimalList
+    @IBOutlet var animalButtons: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var number = 0
+        for button in animalButtons {
+            button.setBackgroundImage(animalList[number].image, for: .normal)
+            print(animalList[number])
+            number += 1
 
-        // Do any additional setup after loading the view.
+        }
+
+    }
+    @IBOutlet var buttons: [UIButton]!
+    
+    @IBAction func button(_ sender: UIButton) {
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-
 }
