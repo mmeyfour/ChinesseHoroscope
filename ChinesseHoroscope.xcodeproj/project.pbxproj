@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		507E21C8253342A700D242B8 /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507E21C7253342A700D242B8 /* AnimalViewController.swift */; };
+		507E21CB253342BE00D242B8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507E21CA253342BE00D242B8 /* LoginViewController.swift */; };
 		50C98586252F688B00D33756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C98585252F688B00D33756 /* AppDelegate.swift */; };
 		50C98588252F688B00D33756 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C98587252F688B00D33756 /* SceneDelegate.swift */; };
 		50C9858A252F688B00D33756 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C98589252F688B00D33756 /* ViewController.swift */; };
@@ -14,9 +16,12 @@
 		50C9858F252F688C00D33756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50C9858E252F688C00D33756 /* Assets.xcassets */; };
 		50C98592252F688C00D33756 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50C98590252F688C00D33756 /* LaunchScreen.storyboard */; };
 		50C9859E25308A3300D33756 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C9859D25308A3300D33756 /* User.swift */; };
+		50C985A22531E07A00D33756 /* ZodiacSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C985A12531E07900D33756 /* ZodiacSign.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		507E21C7253342A700D242B8 /* AnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
+		507E21CA253342BE00D242B8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		50C98582252F688B00D33756 /* ChinesseHoroscope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChinesseHoroscope.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C98585252F688B00D33756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50C98587252F688B00D33756 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		50C98591252F688C00D33756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50C98593252F688C00D33756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50C9859D25308A3300D33756 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		50C985A12531E07900D33756 /* ZodiacSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacSign.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		507E21C62533427500D242B8 /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				50C98589252F688B00D33756 /* ViewController.swift */,
+				507E21C7253342A700D242B8 /* AnimalViewController.swift */,
+				507E21CA253342BE00D242B8 /* LoginViewController.swift */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
 		50C98579252F688B00D33756 = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +74,10 @@
 		50C98584252F688B00D33756 /* ChinesseHoroscope */ = {
 			isa = PBXGroup;
 			children = (
+				507E21C62533427500D242B8 /* viewController */,
 				50C9859C25308A2500D33756 /* Model */,
 				50C98585252F688B00D33756 /* AppDelegate.swift */,
 				50C98587252F688B00D33756 /* SceneDelegate.swift */,
-				50C98589252F688B00D33756 /* ViewController.swift */,
 				50C9858B252F688B00D33756 /* Main.storyboard */,
 				50C9858E252F688C00D33756 /* Assets.xcassets */,
 				50C98590252F688C00D33756 /* LaunchScreen.storyboard */,
@@ -74,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				50C9859D25308A3300D33756 /* User.swift */,
+				50C985A12531E07900D33756 /* ZodiacSign.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,9 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				507E21CB253342BE00D242B8 /* LoginViewController.swift in Sources */,
 				50C9859E25308A3300D33756 /* User.swift in Sources */,
 				50C9858A252F688B00D33756 /* ViewController.swift in Sources */,
 				50C98586252F688B00D33756 /* AppDelegate.swift in Sources */,
+				50C985A22531E07A00D33756 /* ZodiacSign.swift in Sources */,
+				507E21C8253342A700D242B8 /* AnimalViewController.swift in Sources */,
 				50C98588252F688B00D33756 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
