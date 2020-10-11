@@ -115,3 +115,33 @@ extension Animal {
 //perro compatible con tigre y caballo
 //dragón compatible con rata y mono
 //cerdo compatible con conejo y oveja
+extension Animal {
+    var description: String {
+        switch self {
+            case .snake:
+                return "Inteligente, misterioso, intuitivo, atrevido, ordenado, sofisticado"
+            case .horse:
+                return "Leal, trabajador, gregario, cordial, energico, popular"
+            case .rat:
+                return "Ingenioso, ambicioso, trabajador, decidido, laborioso, inteligente"
+            case .ox:
+                return "Paciente, valeroso, convencional, fiable, resuelto, inteligente"
+            case .sheep:
+                return "Pacifico, adaptable, honesto, creativo, imaginativo, sincero"
+            case .monkey:
+                return "Independiente, vivaz, ingenioso, divertido, atrevido, inventivo"
+            case .tiger:
+                return "Atrevido, agotador, apasionado, rapido, peligroso, divertido"
+            case .hare:
+                return "Generoso, intuitivo, tactil, egoista, discreto, sensible"
+            case .rooster:
+                return "Valeroso, protector, vistoso, capaz, comunicativo, honesto"
+            case .dog:
+                return "Leal, responsable, sensible, moral, fiable, imaginativo"
+            case .dragon:
+                return "Entusiasta, atrevido, inspirador, ganador, materialista, independiente"
+            case .pig:
+                return "Sensual, generoso,alegre, tolerante, feliz, entusiasta"
+        }
+    }
+}

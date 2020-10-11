@@ -11,7 +11,7 @@
         <!--Item 2-->
         <scene sceneID="bcs-dy-5TR">
             <objects>
-                <viewController id="9Gj-34-YBj" sceneMemberID="viewController">
+                <viewController id="9Gj-34-YBj" customClass="AnimalViewController" customModule="ChinesseHoroscope" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bsE-Ow-DAi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
