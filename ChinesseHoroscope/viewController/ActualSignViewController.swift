@@ -9,16 +9,18 @@ import UIKit
 
 class ActualSignViewController: UIViewController {
     
+    //    MARK: State
     var userSign = Sign(animal: .dog, element: .fire, domination: .init(name: .yang, type: .major), Dates: [])
     var userName = ""
     let animals = AnimalList
     
-    
+    //    MARK: Outlets
     @IBOutlet weak var firstTextLabel: UILabel!
     @IBOutlet weak var userSignImage: UIImageView!
     @IBOutlet weak var firstAfinImage: UIImageView!
     @IBOutlet weak var secondAfinImage: UIImageView!
     
+    //    MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,6 +46,8 @@ class ActualSignViewController: UIViewController {
             }
         }
     }
+    
+    //    MARK: Helpers
     func animalAspect(animal: Animal,number: Int) {
         
         userSignImage.image = userSign.animal.image[number]
@@ -51,10 +55,7 @@ class ActualSignViewController: UIViewController {
         for sign in animals {
             if animal.friend[0] == sign{
                 firstAfinImage.image = sign.image[number]
-                
             }
-        }
-        for sign in animals {
             if animal.friend[1] == sign{
                 secondAfinImage.image = sign.image[number]
             }

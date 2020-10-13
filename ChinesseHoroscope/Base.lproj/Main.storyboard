@@ -430,28 +430,36 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5XU-Us-pl0">
                                         <rect key="frame" x="46.666666666666657" y="518.66666666666663" width="320.66666666666674" height="152.33333333333337"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snake Black" translatesAutoresizingMaskIntoConstraints="NO" id="25L-67-YsP">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whq-Tq-IIK">
                                                 <rect key="frame" x="0.0" y="0.0" width="152.33333333333334" height="152.33333333333334"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="25L-67-YsP" secondAttribute="height" multiplier="1:1" id="j5r-cc-fME"/>
+                                                    <constraint firstAttribute="width" secondItem="Whq-Tq-IIK" secondAttribute="height" multiplier="1:1" id="uBD-St-1RT"/>
                                                 </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snake Black" translatesAutoresizingMaskIntoConstraints="NO" id="R4P-0l-2nt">
+                                                <state key="normal" backgroundImage="dragon black"/>
+                                                <connections>
+                                                    <action selector="didTappedFirstAfinButton:" destination="eRX-NI-pAY" eventType="touchUpInside" id="SO1-ya-12p"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Cg-JE-vSU">
                                                 <rect key="frame" x="168.33333333333331" y="0.0" width="152.33333333333331" height="152.33333333333334"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="R4P-0l-2nt" secondAttribute="height" multiplier="1:1" id="gMd-wD-eIV"/>
+                                                    <constraint firstAttribute="width" secondItem="8Cg-JE-vSU" secondAttribute="height" multiplier="1:1" id="aE0-Ah-neS"/>
                                                 </constraints>
-                                            </imageView>
+                                                <state key="normal" backgroundImage="dog black"/>
+                                                <connections>
+                                                    <action selector="didTappedSeconAfinButton:" destination="eRX-NI-pAY" eventType="touchUpInside" id="6tI-mx-QY3"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="25L-67-YsP" firstAttribute="height" secondItem="R4P-0l-2nt" secondAttribute="height" id="TQu-Dr-4UL"/>
+                                            <constraint firstItem="Whq-Tq-IIK" firstAttribute="height" secondItem="8Cg-JE-vSU" secondAttribute="height" id="grJ-su-7Yk"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="LQx-12-6qt" secondAttribute="trailing" constant="8" id="EXC-ho-Aq5"/>
                                     <constraint firstItem="LQx-12-6qt" firstAttribute="leading" secondItem="gNO-in-q4F" secondAttribute="leading" constant="8" id="L9E-I8-RUs"/>
-                                    <constraint firstItem="z6l-Ih-DYf" firstAttribute="width" secondItem="25L-67-YsP" secondAttribute="width" multiplier="2" priority="999" id="WGe-id-ygT"/>
+                                    <constraint firstItem="z6l-Ih-DYf" firstAttribute="width" secondItem="Whq-Tq-IIK" secondAttribute="width" multiplier="2" id="ZTB-cD-NXK"/>
                                     <constraint firstItem="Q6d-Aa-KqF" firstAttribute="leading" secondItem="gNO-in-q4F" secondAttribute="leading" constant="8" id="bX8-6Y-jdd"/>
                                     <constraint firstAttribute="trailing" secondItem="Q6d-Aa-KqF" secondAttribute="trailing" constant="8" id="sVd-il-4ne"/>
                                 </constraints>
@@ -468,9 +476,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Njl-Yu-umG"/>
                     <connections>
-                        <outlet property="fisrtAfinImage" destination="25L-67-YsP" id="6tk-Di-DQ0"/>
+                        <outlet property="firstAfinButton" destination="Whq-Tq-IIK" id="r04-K9-a2p"/>
                         <outlet property="fisrtTextLabel" destination="Q6d-Aa-KqF" id="mIS-JF-SNY"/>
-                        <outlet property="secondAfinImage" destination="R4P-0l-2nt" id="Gkm-Uf-5eC"/>
+                        <outlet property="secondAfinButton" destination="8Cg-JE-vSU" id="Q6i-HQ-By2"/>
                         <outlet property="secondTextLabel" destination="LQx-12-6qt" id="Qxq-LH-bXA"/>
                         <outlet property="signImage" destination="z6l-Ih-DYf" id="MXW-78-ZnC"/>
                     </connections>
@@ -483,6 +491,8 @@
     <color key="tintColor" name="AccentColor"/>
     <resources>
         <image name="background" width="1080" height="1920"/>
+        <image name="dog black" width="200" height="200"/>
+        <image name="dragon black" width="200" height="200"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="snake" width="200" height="200"/>

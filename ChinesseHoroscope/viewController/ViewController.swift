@@ -9,17 +9,18 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
+    //    MARK: State
     var date: Dates!
     var userName: User?
     var userSign: Sign?
     
+    //    MARK: Outlets
     @IBOutlet weak var nameTextFiled: UITextField!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var datePicker: UIDatePicker!
-
     
-    
+    //    MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,20 +30,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
         doneButton.layer.cornerRadius = 12
         nameTextFiled.layer.cornerRadius = 12
         datePicker.layer.cornerRadius = 12
-        
         self.hideKeyboardWhenTappedAround()
-//        self.navigationController?.isNavigationBarHidden = true
+        //        self.navigationController?.isNavigationBarHidden = true
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillShow(sender:)),
                                                name: UIResponder.keyboardWillShowNotification, object: nil);
-
+        
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillHide(sender:)),
                                                name: UIResponder.keyboardWillHideNotification, object: nil);
         updateUI()
         
     }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         nameTextFiled.text = ""
         doneButton.isEnabled = false
@@ -53,7 +55,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-    // MARK: Helpers
+    
+    //    MARK: Helpers
     func updateUI () {
         
         nameTextFiled.attributedPlaceholder = NSAttributedString(
@@ -81,18 +84,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         return date
     }
-
     
-    @objc func keyboardWillShow(sender: NSNotification) {
-         self.view.frame.origin.y = -250 // Move view 150 points upward
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.destination is ActualSignViewController
+        {
+            let vc = segue.destination as? ActualSignViewController
+            vc?.userSign = userSign!
+            vc?.userName = userName!.name
+        }
     }
-
-    @objc func keyboardWillHide(sender: NSNotification) {
-        self.view.frame.origin.y = 0 // Move view to original position
-
-    }
-
+    
+    //    MARK: Action
     @IBAction func didEditTextField(_ sender: UITextField) {
         updateUI()
         
@@ -107,19 +109,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             print("\(userName!.name) birthday is \(userName!.birthday.day)/\(userName!.birthday.month)/\(userName!.birthday.year) & \(sign.animal.rawValue)")
             userSign = sign
         }
-        
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if segue.destination is ActualSignViewController
-        {
-            let vc = segue.destination as? ActualSignViewController
-            vc?.userSign = userSign!
-            vc?.userName = userName!.name
-        }
     }
 }
 
+//    MARK: Extention
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self,
@@ -130,5 +123,14 @@ extension UIViewController {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    @objc func keyboardWillShow(sender: NSNotification) {
+        self.view.frame.origin.y = -250 // Move view 150 points upward
+    }
+    
+    @objc func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y = 0 // Move view to original position
+        
     }
 }
