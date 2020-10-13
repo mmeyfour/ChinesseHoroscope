@@ -64,7 +64,7 @@ extension Element {
 }
 
 enum Aspect: String{
-    case yin = "Yin"
+    case yin = "Yin "
     case yang = "Yang"
 }
 

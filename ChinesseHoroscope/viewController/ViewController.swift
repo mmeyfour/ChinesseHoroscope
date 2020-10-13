@@ -11,7 +11,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     var date: Dates!
     var userName: User?
-    var userSign: String?
+    var userSign: Sign?
     
     @IBOutlet weak var nameTextFiled: UITextField!
     @IBOutlet weak var doneButton: UIButton!
@@ -105,7 +105,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         if let sign = userName?.choseSign(birtday: birthDay) {
             print("\(userName!.name) birthday is \(userName!.birthday.day)/\(userName!.birthday.month)/\(userName!.birthday.year) & \(sign.animal.rawValue)")
-            userSign = sign.animal.rawValue
+            userSign = sign
         }
         
     }

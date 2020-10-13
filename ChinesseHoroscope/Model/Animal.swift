@@ -85,32 +85,32 @@ extension Animal {
     }
 }
 extension Animal {
-    var image: UIImage {
+    var image: [UIImage] {
         switch self {
             case .snake:
-                return #imageLiteral(resourceName: "snake Black")
+                return [ #imageLiteral(resourceName: "snake Black"),#imageLiteral(resourceName: "snake white.png")]
             case .horse:
-                return #imageLiteral(resourceName: "horse black")
+                return [#imageLiteral(resourceName: "horse black"),#imageLiteral(resourceName: "horse white.png")]
             case .rat:
-                return #imageLiteral(resourceName: "rat black")
+                return [#imageLiteral(resourceName: "rat black"),#imageLiteral(resourceName: "rat white.png")]
             case .ox:
-                return #imageLiteral(resourceName: "ox black")
+                return [#imageLiteral(resourceName: "ox black"),#imageLiteral(resourceName: "ox white.png")]
             case .sheep:
-                return #imageLiteral(resourceName: "sheep black")
+                return [#imageLiteral(resourceName: "sheep black"),#imageLiteral(resourceName: "sheep white.png")]
             case .monkey:
-                return #imageLiteral(resourceName: "monkey black.png")
+                return [#imageLiteral(resourceName: "monkey black.png"),#imageLiteral(resourceName: "monkey white.png")]
             case .tiger:
-                return #imageLiteral(resourceName: "tiger black")
+                return [#imageLiteral(resourceName: "tiger black"),#imageLiteral(resourceName: "tiger white.png")]
             case .hare:
-                return #imageLiteral(resourceName: "hare black")
+                return [#imageLiteral(resourceName: "hare black"),#imageLiteral(resourceName: "hare white.png")]
             case .rooster:
-                return #imageLiteral(resourceName: "rooster black.png")
+                return [#imageLiteral(resourceName: "rooster black.png"),#imageLiteral(resourceName: "rooster white.png")]
             case .dog:
-                return #imageLiteral(resourceName: "dog black")
+                return [#imageLiteral(resourceName: "dog black"),#imageLiteral(resourceName: "dog white.png")]
             case .dragon:
-                return #imageLiteral(resourceName: "dragon black")
+                return [#imageLiteral(resourceName: "dragon black"),#imageLiteral(resourceName: "dragon white.png")]
             case .pig:
-                return #imageLiteral(resourceName: "pig black")
+                return [#imageLiteral(resourceName: "pig black"),#imageLiteral(resourceName: "pig white.png")]
         }
     }
 }

@@ -9,13 +9,13 @@ import UIKit
 
 class ActualSignViewController: UIViewController {
     
-    var userSign = ""
+    var userSign = Sign(animal: .dog, element: .fire, domination: .init(name: .yang, type: .major), Dates: [])
     var userName = ""
     let animals = AnimalList
     
+    
     @IBOutlet weak var firstTextLabel: UILabel!
     @IBOutlet weak var userSignImage: UIImageView!
-    @IBOutlet weak var secondTextLabel: UILabel!
     @IBOutlet weak var firstAfinImage: UIImageView!
     @IBOutlet weak var secondAfinImage: UIImageView!
     
@@ -26,25 +26,38 @@ class ActualSignViewController: UIViewController {
         UIBarButtonItem.appearance().tintColor = UIColor.systemBlue
         
         for animal in animals{
-            if animal.rawValue == userSign{
-                print("\(userName) su signo zodiaco es \(animal.rawValue) -> \(userSign)")
-                firstTextLabel.text = "\(userName) su signo zodiaco es \(animal.rawValue) y sus cualidades son : \(animal.description)"
-                userSignImage.image = animal.image
+            if animal.rawValue == userSign.animal.rawValue{
+                print("\(userName) su signo zodiaco es \(animal.rawValue) -> \(userSign.animal.rawValue)")
+                firstTextLabel.text = "\(userName) tu signo zodiaco es \(animal.rawValue) y eres \(animal.description). Tu elemento es el \(userSign.element.rawValue) \(userSign.element.elementIcon) de aspecto \(userSign.domination.name) \(userSign.domination.type.rawValue) y tienes afinidad con \(userSign.animal.friend[0].rawValue) y \(userSign.animal.friend[1].rawValue)"
                 
-                for sign in animals {
-                    if animal.friend[0] == sign{
-//                        print("\(animal.friend[0]) : \(sign)")
-                        firstAfinImage.image = sign.image
-                    }
+                switch userSign.domination.name {
+                    case .yang:
+                        animalAspect(animal: animal, number: 1)
+                        self.view.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+                        firstTextLabel.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+                    case .yin:
+                        animalAspect(animal: animal, number: 0)
+                        self.view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+                        firstTextLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
                 }
-                for sign in animals {
-                    if animal.friend[1] == sign{
-//                        print("\(animal.friend[1]) : \(sign)")
-                        secondAfinImage.image = sign.image
-                    }
-                }
+                
             }
         }
     }
-    
+    func animalAspect(animal: Animal,number: Int) {
+        
+        userSignImage.image = userSign.animal.image[number]
+        
+        for sign in animals {
+            if animal.friend[0] == sign{
+                firstAfinImage.image = sign.image[number]
+                
+            }
+        }
+        for sign in animals {
+            if animal.friend[1] == sign{
+                secondAfinImage.image = sign.image[number]
+            }
+        }
+    }
 }

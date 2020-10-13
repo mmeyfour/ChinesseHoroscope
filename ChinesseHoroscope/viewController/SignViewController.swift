@@ -10,7 +10,6 @@ import UIKit
 class SignViewController: UIViewController {
     
     var tag = 0
-    let animals = AnimalList
     
     @IBOutlet weak var fisrtTextLabel: UILabel!
     @IBOutlet weak var signImage: UIImageView!
@@ -21,22 +20,30 @@ class SignViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(animals[tag])
-        fisrtTextLabel.text = "\(animals[tag].rawValue): \(animals[tag].description)"
-        signImage.image = animals[tag].image
+        let animal = AnimalList[tag]
         
-        for animal in 0...animals.count-1 {
-            if animals[tag].friend[0] == animals[animal] {
-                print("\(animals[tag].friend[0]) : \(animals[animal])")
-                fisrtAfinImage.image = animals[animal].image
+        updateUI(animal: animal)
+        
+    }
+    
+    func updateUI(animal: Animal){
+        fisrtTextLabel.text = "\(animal.rawValue) se caracteriza por ser \(animal.description). Los usuarios de este signo pueden tener afinidad con otros usuarios de signo \(animal.friend[0].rawValue) y \(animal.friend[1].rawValue)"
+        signImage.image = animal.image[0]
+        secondTextLabel.text = "Descubre su ciclo de afinidad entre \(Element.fire.rawValue), \(Element.water.rawValue),\(Element.ground.rawValue), \(Element.metal.rawValue) y \(Element.wood.rawValue) segun tu año junto con sus aspectos dominantes entre el \(Aspect.yin.rawValue) y el \(Aspect.yin.rawValue)"
+        
+        for number in 0...AnimalList.count-1 {
+            if animal.friend[0] == AnimalList[number] {
+                print("\(animal.friend[0]) : \(AnimalList[number])")
+                fisrtAfinImage.image = AnimalList[number].image[0]
             }
         }
-        for animal in 0...animals.count-1 {
-            if animals[tag].friend[1] == animals[animal] {
-                print("\(animals[tag].friend[1]) : \(animals[animal])")
-                secondAfinImage.image = animals[animal].image
+        for number in 0...AnimalList.count-1 {
+            if animal.friend[1] == AnimalList[number] {
+                print("\(animal.friend[1]) : \(AnimalList[number])")
+                secondAfinImage.image = AnimalList[number].image[0]
             }
         }
     }
-
+    
 }
+

@@ -19,7 +19,7 @@ class AnimalViewController: UIViewController {
         
         var number = 0
         for button in animalButtons {
-            button.setBackgroundImage(animalList[number].image, for: .normal)
+            button.setBackgroundImage(animalList[number].image[0], for: .normal)
             print(animalList[number])
             number += 1
 

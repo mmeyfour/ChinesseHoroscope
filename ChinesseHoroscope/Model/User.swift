@@ -35,7 +35,7 @@ extension User{
         if dateConvert(date: "20/02/1985") <= chosenDate
             && dateConvert(date: "08/02/1986") >= chosenDate{
             print(1)
-            return Sign(animal: .ox, element: .wood, domination: .init(name: .yin, type: .major), Dates: ["20/02/1985","08/02/1986"])
+            return Sign(animal: .ox, element: .wood, domination: .init(name: .yin, type: .minor), Dates: ["20/02/1985","08/02/1986"])
         }
         else if dateConvert(date: "09/02/1986") <= chosenDate
                     && dateConvert(date: "28/01/1987") >= chosenDate{
@@ -45,7 +45,7 @@ extension User{
         else if dateConvert(date: "29/01/1987") <= chosenDate
                     && dateConvert(date: "16/02/1988") >= chosenDate {
             print(3)
-            return Sign(animal: .hare, element: .fire, domination: .init(name: .yin, type: .major), Dates: ["29/01/1987","16/02/1988"])
+            return Sign(animal: .hare, element: .fire, domination: .init(name: .yin, type: .minor), Dates: ["29/01/1987","16/02/1988"])
         }
         else if dateConvert(date: "17/02/1988") <= chosenDate
                     && dateConvert(date: "05/02/1989") >= chosenDate{
@@ -55,7 +55,7 @@ extension User{
         else if dateConvert(date: "06/02/1989") <= chosenDate
                     && dateConvert(date: "26/01/1990") >= chosenDate {
             print(5)
-            return Sign(animal: .snake, element: .ground, domination: .init(name: .yin, type: .major), Dates: ["06/02/1989","26/01/1990"])
+            return Sign(animal: .snake, element: .ground, domination: .init(name: .yin, type: .minor), Dates: ["06/02/1989","26/01/1990"])
         }
         else if dateConvert(date: "27/01/1990") <= chosenDate
                     && dateConvert(date: "14/02/1991") >= chosenDate {
@@ -65,7 +65,7 @@ extension User{
         else if dateConvert(date: "15/02/1991") <= chosenDate
                     && dateConvert(date: "03/02/1992") >= chosenDate {
             print(7)
-            return Sign(animal: .sheep, element: .metal, domination: .init(name: .yin, type: .major), Dates: ["15/02/1991","03/02/1992"])
+            return Sign(animal: .sheep, element: .metal, domination: .init(name: .yin, type: .minor), Dates: ["15/02/1991","03/02/1992"])
         }
         else if dateConvert(date: "04/02/1992") <= chosenDate
                     && dateConvert(date: "22/01/1993") >= chosenDate {
@@ -75,7 +75,7 @@ extension User{
         else if dateConvert(date: "23/01/1993") <= chosenDate
                     && dateConvert(date: "09/02/1994") >= chosenDate {
             print(9)
-            return Sign(animal: .rooster, element: .water, domination: .init(name: .yin, type: .major), Dates: ["23/01/1993","09/02/1994"])
+            return Sign(animal: .rooster, element: .water, domination: .init(name: .yin, type: .minor), Dates: ["23/01/1993","09/02/1994"])
         }
         else if dateConvert(date: "10/02/1994") <= chosenDate
                     && dateConvert(date: "30/01/1995") >= chosenDate {
@@ -85,7 +85,7 @@ extension User{
         else if dateConvert(date: "31/01/1995") <= chosenDate
                     && dateConvert(date: "18/02/1996") >= chosenDate {
             print(11)
-            return Sign(animal: .pig, element: .wood, domination: .init(name: .yin, type: .major), Dates: ["31/01/1995","18/02/1996"])
+            return Sign(animal: .pig, element: .wood, domination: .init(name: .yin, type: .minor), Dates: ["31/01/1995","18/02/1996"])
         }
         else if dateConvert(date: "19/02/1996") <= chosenDate
                     && dateConvert(date: "07/02/1997") >= chosenDate {
@@ -95,7 +95,7 @@ extension User{
         else if dateConvert(date: "08/02/1997") <= chosenDate
                     && dateConvert(date: "27/01/1998") >= chosenDate {
             print(13)
-            return Sign(animal: .ox, element: .fire, domination: .init(name: .yin, type: .major), Dates: ["08/02/1997","27/01/1998"])
+            return Sign(animal: .ox, element: .fire, domination: .init(name: .yin, type: .minor), Dates: ["08/02/1997","27/01/1998"])
         }
         else if dateConvert(date: "28/01/1998") <= chosenDate
                     && dateConvert(date: "15/02/1999") >= chosenDate {
@@ -105,7 +105,7 @@ extension User{
         else if dateConvert(date: "16/02/1999") <= chosenDate
                     && dateConvert(date: "04/02/2000") >= chosenDate {
             print(15)
-            return Sign(animal: .hare, element: .ground, domination: .init(name: .yin, type: .major), Dates: ["16/02/1999","04/02/2000"])
+            return Sign(animal: .hare, element: .ground, domination: .init(name: .yin, type: .minor), Dates: ["16/02/1999","04/02/2000"])
         }
         else if dateConvert(date: "05/02/2000") <= chosenDate
                     && dateConvert(date: "23/01/2001") >= chosenDate {
@@ -113,7 +113,7 @@ extension User{
             return Sign(animal: .dragon, element: .metal, domination: .init(name: .yang, type: .major), Dates: ["05/02/2000","23/01/2001"])
         } else {
             print(17)
-            return Sign(animal: .dragon, element: .metal, domination: .init(name: .yang, type: .major), Dates: ["05/02/2000","23/01/2001"])
+            return Sign(animal: .dragon, element: .metal, domination: .init(name: .yang, type: .minor), Dates: ["05/02/2000","23/01/2001"])
         }
     }
 }
