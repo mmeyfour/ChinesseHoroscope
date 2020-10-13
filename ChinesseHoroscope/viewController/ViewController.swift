@@ -11,6 +11,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     var date: Dates!
     var userName: User?
+    var userSign: String?
     
     @IBOutlet weak var nameTextFiled: UITextField!
     @IBOutlet weak var doneButton: UIButton!
@@ -30,6 +31,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         datePicker.layer.cornerRadius = 12
         
         self.hideKeyboardWhenTappedAround()
+//        self.navigationController?.isNavigationBarHidden = true
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillShow(sender:)),
@@ -44,6 +46,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         nameTextFiled.text = ""
         doneButton.isEnabled = false
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     // MARK: Helpers
     func updateUI () {
@@ -97,8 +105,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         if let sign = userName?.choseSign(birtday: birthDay) {
             print("\(userName!.name) birthday is \(userName!.birthday.day)/\(userName!.birthday.month)/\(userName!.birthday.year) & \(sign.animal.rawValue)")
+            userSign = sign.animal.rawValue
         }
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.destination is ActualSignViewController
+        {
+            let vc = segue.destination as? ActualSignViewController
+            vc?.userSign = userSign!
+            vc?.userName = userName!.name
+        }
     }
 }
 
@@ -114,4 +132,3 @@ extension UIViewController {
         view.endEditing(true)
     }
 }
-

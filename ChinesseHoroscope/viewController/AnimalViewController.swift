@@ -9,6 +9,8 @@ import UIKit
 
 class AnimalViewController: UIViewController {
     
+    var buttonTag = 13
+    
     let animalList = AnimalList
     @IBOutlet var animalButtons: [UIButton]!
     
@@ -24,9 +26,24 @@ class AnimalViewController: UIViewController {
         }
 
     }
-    @IBOutlet var buttons: [UIButton]!
+    @IBAction func didTappedSignButton(_ sender: UIButton) {
+        
+        guard let tag = (sender as? UIButton)?.tag else {
+            return
+        }
+        buttonTag = tag
+        print(buttonTag)
+        performSegue(withIdentifier: "Sign", sender: nil)
+    }
     
-    @IBAction func button(_ sender: UIButton) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.destination is SignViewController
+        {
+            let vc = segue.destination as? SignViewController
+            vc?.tag = buttonTag
+        }
     }
     
 }
+
+

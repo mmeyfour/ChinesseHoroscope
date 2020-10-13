@@ -40,20 +40,36 @@ class Dates {
 }
 
 enum Element: String {
-    case water = "Water"
+    case water = "Agua"
     case metal = "Metal"
-    case fire = "Fire"
-    case wood = "Wood"
-    case ground = "Ground"
+    case fire = "Fuego"
+    case wood = "Madera"
+    case ground = "Tierra"
+}
+extension Element {
+    var elementIcon: String {
+        switch self {
+            case .water:
+                return "🌊"
+            case .metal:
+                return "🔩"
+            case .fire:
+                return "🔥"
+            case .wood:
+                return "🌲"
+            case .ground:
+                return "⛰"
+        }
+    }
 }
 
-enum Aspect{
-    case yin
-    case yang
+enum Aspect: String{
+    case yin = "Yin"
+    case yang = "Yang"
 }
 
-enum ForceType {
-    case minor
-    case major
+enum ForceType: String {
+    case minor = "menor"
+    case major = "Mayor"
 }
 

@@ -9,18 +9,18 @@ import Foundation
 import UIKit
 
 enum Animal: String {
-    case snake = "Snake"
-    case horse = "Horse"
-    case rat = "Rat"
-    case ox = "Ox"
-    case sheep = "Sheep"
-    case monkey = "Monkey"
-    case tiger = "Tiger"
-    case hare = "Hare"
-    case rooster = "Rooster"
-    case dog = "Dog"
+    case snake = "Serpiente"
+    case horse = "Caballo"
+    case rat = "Rata"
+    case ox = "Buey"
+    case sheep = "Cabra"
+    case monkey = "Mono"
+    case tiger = "Tigre"
+    case hare = "Liebre"
+    case rooster = "Gallo"
+    case dog = "Perro"
     case dragon = "Dragon"
-    case pig = "Pig"
+    case pig = "Cerdo"
 }
 
 extension Animal {
@@ -29,27 +29,27 @@ extension Animal {
             case .snake:
                 return [Animal.rooster,Animal.ox]
             case .horse:
-                return [Animal.rooster,Animal.ox]
+                return [Animal.tiger,Animal.dog]
             case .rat:
-                return [Animal.rooster,Animal.ox]
+                return [Animal.dragon,Animal.monkey]
             case .ox:
-                return [Animal.rooster,Animal.ox]
+                return [Animal.snake,Animal.rooster]
             case .sheep:
-                return [Animal.rooster,Animal.ox]
+                return [Animal.pig,Animal.hare]
             case .monkey:
-                return [Animal.rooster,Animal.ox]
+                return [Animal.rat,Animal.dragon]
             case .tiger:
-                return [Animal.rooster,Animal.ox]
+                return [Animal.horse,Animal.dog]
             case .hare:
-                return [Animal.rooster,Animal.ox]
+                return [Animal.pig,Animal.sheep]
             case .rooster:
-                return [Animal.rooster,Animal.ox]
+                return [Animal.snake,Animal.ox]
             case .dog:
-                return [Animal.rooster,Animal.ox]
+                return [Animal.tiger,Animal.horse]
             case .dragon:
-                return [Animal.rooster,Animal.ox]
+                return [Animal.rat,Animal.monkey]
             case .pig:
-                return [Animal.rooster,Animal.ox]
+                return [Animal.hare,Animal.sheep]
         }
     }
 }
@@ -88,29 +88,29 @@ extension Animal {
     var image: UIImage {
         switch self {
             case .snake:
-                return #imageLiteral(resourceName: "snake")
+                return #imageLiteral(resourceName: "snake Black")
             case .horse:
-                return #imageLiteral(resourceName: "mole.png")
+                return #imageLiteral(resourceName: "horse black")
             case .rat:
-                return #imageLiteral(resourceName: "mole.png")
+                return #imageLiteral(resourceName: "rat black")
             case .ox:
-                return #imageLiteral(resourceName: "mole.png")
+                return #imageLiteral(resourceName: "ox black")
             case .sheep:
-                return #imageLiteral(resourceName: "mole.png")
+                return #imageLiteral(resourceName: "sheep black")
             case .monkey:
-                return #imageLiteral(resourceName: "mole.png")
+                return #imageLiteral(resourceName: "monkey black.png")
             case .tiger:
-                return #imageLiteral(resourceName: "mole.png")
+                return #imageLiteral(resourceName: "tiger black")
             case .hare:
-                return #imageLiteral(resourceName: "mole.png")
+                return #imageLiteral(resourceName: "hare black")
             case .rooster:
-                return #imageLiteral(resourceName: "mole.png")
+                return #imageLiteral(resourceName: "rooster black.png")
             case .dog:
-                return #imageLiteral(resourceName: "mole.png")
+                return #imageLiteral(resourceName: "dog black")
             case .dragon:
-                return #imageLiteral(resourceName: "mole.png")
+                return #imageLiteral(resourceName: "dragon black")
             case .pig:
-                return #imageLiteral(resourceName: "mole.png")
+                return #imageLiteral(resourceName: "pig black")
         }
     }
 }
