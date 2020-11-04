@@ -22,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50299F9B2552311B00171170 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		507E21C7253342A700D242B8 /* AnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
 		507E21D025337EF400D242B8 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		507E21D325345AC700D242B8 /* ActualSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualSignViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 		50C98579252F688B00D33756 = {
 			isa = PBXGroup;
 			children = (
+				50299F9B2552311B00171170 /* README.md */,
 				50C98584252F688B00D33756 /* ChinesseHoroscope */,
 				50C98583252F688B00D33756 /* Products */,
 			);
